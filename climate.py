@@ -64,11 +64,4 @@ def stationary_points(T_grid, emiss=emiss):
 
 # print(stationary_points(T_grid))
 
-emiss_grid = np.linspace(0.3, 1.0, num=64)
-stat = stationary_points(T_grid, emiss=emiss_grid)
-cols= {True: '#333366', False: '#cc9999'}
-for _emiss, _stat in zip(emiss_grid, stat):
-    for _T, _s in zip(*_stat):
-        plt.plot(_emiss, _T, linestyle='none', marker='o', ms=1, c=cols[_s])
-plt.show()
 
